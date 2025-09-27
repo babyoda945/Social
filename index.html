@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Social Go!</title>
+</head>
+<body>
+    <div class="nav">
+  <div class="nav-title">
+    <h1>Social</h1>
+
+  </div>
+
+  <!-- Other navigation icons -->
+  <img src="https://cdn-icons-png.flaticon.com/128/9314/9314393.png" alt="">
+  <img src="https://cdn-icons-png.flaticon.com/128/5948/5948543.png" alt="">
+  <img src="https://cdn-icons-png.flaticon.com/128/11312/11312945.png" alt="">
+  <img src="https://cdn-icons-png.flaticon.com/128/4449/4449624.png" alt="">
+  <img src="https://cdn-icons-png.flaticon.com/128/2645/2645897.png" alt="">
+  <img src="https://cdn-icons-png.flaticon.com/128/1828/1828859.png" alt="">
+</div>
+
+   
+
+    <div class="line ">
+        <hr>
+    </div>
+    <div class="pic">
+        <img src="asset/1.webp" alt="">
+    </div>
+    <div class="search">
+        <input type="search" placeholder="what's on your mind? " name="" id="">
+        <img src="https://cdn-icons-png.flaticon.com/128/3161/3161837.png" alt="">
+    </div>
+    <div class="story-bar">
+  <!-- Create Story -->
+  <div class="story create-story">
+    <div class="plus">+</div>
+    <span>Create Story</span>
+  </div>
+
+  <!-- User Stories -->
+  <div class="story">
+    <img src="asset/fitgirl.png" alt="Story 1">
+  </div>
+  <div class="story">
+    <img src="asset/OIP.jpg" alt="Story 2">
+  </div>
+  <div class="story">
+    <img src="asset/OIP.webpyas.webp" alt="Story 3">
+  </div>
+   <div class="story">
+    <img src="asset/mario.png" alt="Story 3">
+  </div>
+</div>
+
+<div class="post-feed">
+  <!-- Single Post -->
+  <div class="post">
+    <div class="post-header">
+      <img src="asset/fitgirl.png"Profile" class="profile-pic">
+      <div class="user-info">
+        <h4>fitgirl</h4>
+        <span>2 hours ago</span>
+      </div>
+    </div>
+    <p class="post-text">Just enjoying the view today 🌄</p>
+    <img src="asset/OIP.jpg" alt="Post Image" class="post-image">
+    <div class="post-actions">
+      <button>❤️ Like</button>
+      <button>💬 Comment</button>
+    </div>
+  </div>
+
+    <div class="post">
+    <div class="post-header">
+      <img src="asset/mario.png"Profile" class="profile-pic">
+      <div class="user-info">
+        <h4>mario</h4>
+        <span>9 hours ago</span>
+      </div>
+    </div>
+    <p class="post-text">like this character</p>
+    <img src="asset/OIP.webpyas.webp" alt="Post Image" class="post-image">
+    <div class="post-actions">
+      <button>❤️ Like</button>
+      <button>💬 Comment</button>
+    </div>
+  </div>
+
+  <!-- Repeat .post for more entries -->
+</div>
+
+
+<script>
+  const stories = document.querySelectorAll('.story img');
+  const viewer = document.getElementById('storyViewer');
+  const viewerImage = document.getElementById('viewerImage');
+
+  stories.forEach(story => {
+    story.addEventListener('click', () => {
+      viewerImage.src = story.src;
+      viewer.style.display = 'flex';
+    });
+  });
+
+  viewer.addEventListener('click', () => {
+    viewer.style.display = 'none';
+  });
+
+  document.querySelector('.create-story').addEventListener('click', () => {
+    alert("Open story creation tool here!");
+  });
+</script>
+
+  
+    
+    
+
+</body>
+</html>
